@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:id="@+id/TV_number"
-        android:textSize="120sp"
+        android:textSize="110sp"
         android:textStyle="bold"
         android:gravity="center"
         style="@style/MyTextViewStyle"
@@ -24,22 +24,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hint : "
+        android:paddingTop="50dp"
+        android:text=""
         android:id="@+id/TV_hint"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:gravity="center"
         style="@style/MyTextViewStyle"
         android:background="#07000000" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hint : "
+        android:text=""
         android:id="@+id/TV_factors"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:gravity="center"
         style="@style/MyTextViewStyle"
         android:background="#07000000" />
 
