@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Prime Checker 2</string>
+    <string name="action_quit">Quit</string>
+
+    <!-- ********** Portrait ********** -->
+    <string name="port_yes">Yes</string>
+    <string name="port_no">No</string>
+    <string name="port_next">Next</string>
+    <string name="port_hint">Hint</string>
+    <string name="port_cheat">Cheat</string>
+
+    <!-- ********** Landscape ********** -->
+    <string name="land_yes">Yes</string>
+    <string name="land_no">No</string>
+    <string name="land_next">Next</string>
+    <string name="land_hint">Hint</string>
+    <string name="land_cheat">Cheat</string>
+
+    <string name="title_activity_hint">HintActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_cheat">CheatActivity</string>
+</resources>
