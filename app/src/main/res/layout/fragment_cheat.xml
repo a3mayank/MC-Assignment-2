@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:id="@+id/TV_number"
-        android:textSize="75sp"
+        android:textSize="120sp"
         android:textStyle="bold"
         android:gravity="center"
         style="@style/MyTextViewStyle"
@@ -24,11 +24,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Prime Number :"
         android:id="@+id/TV_answer"
-        android:textSize="75sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:gravity="center"
+        style="@style/MyTextViewStyle"
+        android:background="#07000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reason : More than 2 factors"
+        android:id="@+id/TV_reason"
+        android:textSize="30sp"
+        android:textStyle="bold"
         style="@style/MyTextViewStyle"
         android:background="#07000000" />
 

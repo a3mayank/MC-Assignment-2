@@ -182,6 +182,7 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), HintActivity.class);
+                intent.putExtra("HintActivity", Integer.toString(randomInt));
                 intent.putExtra("HintActivityBG", image_index);
                 startActivityForResult(intent, 1);
             }

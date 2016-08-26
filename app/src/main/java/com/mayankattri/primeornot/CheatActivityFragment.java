@@ -1,9 +1,9 @@
 package com.mayankattri.primeornot;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +16,6 @@ import java.util.ArrayList;
  */
 public class CheatActivityFragment extends Fragment {
 
-    private String number;
-    private int image_index;
-    private String optionYes = "is a Prime Number";
-    private String optionNo = "is not a Prime Number";
-
     public CheatActivityFragment() {
     }
 
@@ -31,6 +26,11 @@ public class CheatActivityFragment extends Fragment {
         Intent intent = getActivity().getIntent();
         View rootView = inflater.inflate(R.layout.fragment_cheat, container, false);
 
+        String optionYes = "Prime Number : YES";
+        String optionNo = "Prime Number : NO";
+        String reasonYes = "Reason : Only 2 factors";
+        String reasonNo = "Reason : More than 2 factors";
+
         ArrayList<Integer> myImageList = new ArrayList<>();
         myImageList.add(R.drawable.a);
         myImageList.add(R.drawable.b);
@@ -40,24 +40,29 @@ public class CheatActivityFragment extends Fragment {
         myImageList.add(R.drawable.f);
 
         if(intent != null) {
-            number = intent.getStringExtra("CheatActivity");
-            image_index = intent.getIntExtra("CheatActivityBG", 0);
+            String number = intent.getStringExtra("CheatActivity");
+            int image_index = intent.getIntExtra("CheatActivityBG", 0);
 
             if(image_index == 0) {
                 rootView.setBackgroundResource(myImageList.get(5));
             } else {
-                rootView.setBackgroundResource(myImageList.get(image_index-1));
+                rootView.setBackgroundResource(myImageList.get(image_index -1));
             }
 
             TextView textView1 = (TextView) rootView.findViewById(R.id.TV_number);
             TextView textView2 = (TextView) rootView.findViewById(R.id.TV_answer);
+            TextView textView3 = (TextView) rootView.findViewById(R.id.TV_reason);
 
             textView1.setText(number);
 
             if(isPrime(Integer.parseInt(number))) {
+                textView1.setTextColor(Color.GREEN);
                 textView2.setText(optionYes);
+                textView3.setText(reasonYes);
             } else {
+                textView1.setTextColor(Color.RED);
                 textView2.setText(optionNo);
+                textView3.setText(reasonNo);
             }
 
         }

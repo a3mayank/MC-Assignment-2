@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,9 +13,31 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Prime numbers are those numbers which are only divisible by 1 and themselves"
-        android:id="@+id/TV_primeDetails"
-        android:textSize="40sp"
+        android:text=""
+        android:id="@+id/TV_number"
+        android:textSize="120sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        style="@style/MyTextViewStyle"
+        android:background="#07000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hint : "
+        android:id="@+id/TV_hint"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        style="@style/MyTextViewStyle"
+        android:background="#07000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hint : "
+        android:id="@+id/TV_factors"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"
         style="@style/MyTextViewStyle"
